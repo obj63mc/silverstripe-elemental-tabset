@@ -14,22 +14,22 @@ class TabElement extends ElementList
     /**
      * @var string
      */
-    private static $icon = 'font-icon-block-layout';
+    private static string $icon = 'font-icon-block-layout';
 
     /**
      * @var string
      */
-    private static $table_name = "TabElement";
+    private static string $table_name = "TabElement";
 
     /**
      * @var string
      */
-    private static $singular_name = 'Tab';
+    private static string $singular_name = 'Tab';
 
     /**
      * @var string
      */
-    private static $plural_name = 'Tabs';
+    private static string $plural_name = 'Tabs';
 
     /**
      * @var string
@@ -77,16 +77,6 @@ class TabElement extends ElementList
                 $ct . $label
             )->Summary(20);
         }
-    }
-
-    /**
-     * @return array
-     */
-    protected function provideBlockSchema()
-    {
-        $blockSchema = parent::provideBlockSchema();
-        $blockSchema['content'] = $this->getSummary();
-        return $blockSchema;
     }
 
     /**

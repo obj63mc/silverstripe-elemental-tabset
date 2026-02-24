@@ -14,22 +14,22 @@ class ElementTabSet extends ElementList
     /**
      * @var string
      */
-    private static $icon = 'font-icon-block-layout';
+    private static string $icon = 'font-icon-block-layout';
 
     /**
      * @var string
      */
-    private static $table_name = "ElementTabSet";
+    private static string $table_name = "ElementTabSet";
 
     /**
      * @var string
      */
-    private static $singular_name = 'Tabset';
+    private static string $singular_name = 'Tabset';
 
     /**
      * @var string
      */
-    private static $plural_name = 'Tabsets';
+    private static string $plural_name = 'Tabsets';
 
     /**
      * Set to false to prevent an in-line edit form from showing in an elemental area. Instead the element will be
@@ -72,16 +72,6 @@ class ElementTabSet extends ElementList
                 $ct . $label
             )->Summary(20);
         }
-    }
-
-    /**
-     * @return array
-     */
-    protected function provideBlockSchema()
-    {
-        $blockSchema = parent::provideBlockSchema();
-        $blockSchema['content'] = $this->getSummary();
-        return $blockSchema;
     }
 
     /**
